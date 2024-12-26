@@ -5,6 +5,8 @@ const EC2 = require('aws-sdk/clients/ec2');
 const region = core.getInput('aws-region', { required: true });
 const accessKeyId = core.getInput('aws-access-key-id', { required: true });
 const secretAccessKey = core.getInput('aws-secret-access-key', { required: true });
+const sessionToken = core.getInput('aws-session-token', { required: false });
+
 const groupIds = core
   .getInput('aws-security-group-id', { required: true })
   .split(',')
@@ -21,6 +23,7 @@ AWS.config.update({
   region,
   accessKeyId,
   secretAccessKey,
+  sessionToken,
 });
 const ec2 = new EC2();
 
