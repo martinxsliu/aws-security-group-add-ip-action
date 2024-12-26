@@ -7,16 +7,16 @@ branding:
 inputs:
   aws-access-key-id:
     description: 'AWS Access Key ID'
-    required: true
+    required: false
   aws-secret-access-key:
     description: 'AWS Secret Access Key'
-    required: true
+    required: false
   aws-session-token:
     description: 'AWS Session Token'
     required: false
   aws-region:
     description: 'AWS Region'
-    required: true
+    required: false
   aws-security-group-id:
     description: 'AWS Security Group'
     required: true
