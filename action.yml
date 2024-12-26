@@ -36,6 +36,9 @@ inputs:
     description: 'The descriptipn of your IP permission'
     required: false
     default: 'GitHub Action'
+  revoke:
+    description: 'Revoke the IP permission'
+    required: false
 runs:
   using: 'node20'
   main: 'dist/main/index.js'

@@ -20,9 +20,9 @@ async function run() {
       );
     }
 
-    console.log(`The IP ${myPublicIp} is removed`);
+    core.info(`The IP ${myPublicIp} is removed`);
   } catch (error) {
-    core.setFailed(error.message);
+    core.info(error.message);
   }
 }
 

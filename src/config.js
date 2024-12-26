@@ -32,6 +32,8 @@ const toPort = toPortInput.length > 0 ? parseInt(toPortInput) : false;
 const description = core.getInput("description", { required: false });
 const protocol = core.getInput("protocol", { required: false });
 
+const revoke = core.getInput("revoke", { required: false });
+
 const ec2 = new EC2Client(config);
 core.info(`EC2 client created for region ${region}`);
 
@@ -42,4 +44,5 @@ module.exports = {
   protocol,
   description,
   ec2,
+  revoke,
 };

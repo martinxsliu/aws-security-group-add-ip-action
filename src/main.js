@@ -47,6 +47,10 @@ async function run() {
         }
       }
 
+      if (config.revoke) {
+        continue;
+      }
+
       const myPublicIp = await publicIp.v4();
       await config.ec2.send(
         new AuthorizeSecurityGroupIngressCommand({
